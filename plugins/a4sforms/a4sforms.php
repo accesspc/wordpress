@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @link              http://www.reiciunas.lt
  * @since             1.0.0
@@ -8,7 +9,7 @@
  * Plugin Name:       A4s Forms
  * Plugin URI:        http://www.reiciunas.lt/plugins/a4s-forms
  * Description:       Forms
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Robertas Reiciunas
  * Author URI:        http://www.reiciunas.lt/
  * License:           GPL-2.0+
@@ -17,53 +18,50 @@
  * Domain Path:       /languages/
  */
 
-/*
-A4s Forms is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or
-any later version.
- 
-A4s Forms is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
- 
-You should have received a copy of the GNU General Public License
-along with A4s Forms. If not, see http://www.gnu.org/licenses/gpl-2.0.txt.
- */
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
-	die( 'No script kiddies please!' );
+	die;
 }
 
-function a4sforms_setup_post_types() {
-	register_post_type(
-		'a4sforms',
-		['public' => 'true']
-	);
+/**
+ * The code that runs during plugin activation.
+ * This action is documented in includes/class-a4sforms-activator.php
+ */
+function activate_a4sforms() {
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-a4sforms-activator.php';
+	A4sForms_Activator::activate();
 }
-add_action('init', 'a4sforms_setup_post_types');
+register_activation_hook( __FILE__, 'activate_a4sforms' );
 
-function a4sforms_install() {
-	a4sforms_setup_post_types();
-	flush_rewrite_rules();
+/**
+ * The code that runs during plugin deactivation.
+ * This action is documented in includes/class-a4sforms-deactivator.php
+ */
+function deactivate_a4sforms() {
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-a4sforms-deactivator.php';
+	A4sForms_Deactivator::deactivate();
 }
-register_activation_hook(__FILE__, 'a4sforms_install');
+register_deactivation_hook( __FILE__, 'deactivate_a4sforms' );
 
-function a4sforms_deactivation() {
-	flush_rewrite_rules();
+/**
+ * The core plugin class that is used to define internationalization,
+ * admin-specific hooks, and public-facing site hooks.
+ */
+require plugin_dir_path( __FILE__ ) . 'includes/class-a4sforms.php';
+
+/**
+ * Begins execution of the plugin.
+ *
+ * Since everything within the plugin is registered via hooks,
+ * then kicking off the plugin from this point in the file does
+ * not affect the page life cycle.
+ *
+ * @since    1.0.0
+ */
+function run_a4sforms() {
+
+	$plugin = new A4sForms();
+	$plugin->run();
+
 }
-register_deactivation_hook(__FILE__, 'a4sforms_deactivation');
-
-if (!class_exists('A4sForms')) {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-a4sforms.php';
-	
-}
-
-
-
-
-
-
-
-
+run_a4sforms();
