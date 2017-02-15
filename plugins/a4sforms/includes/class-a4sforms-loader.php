@@ -1,15 +1,4 @@
 <?php
-
-/**
- * Register all actions and filters for the plugin
- *
- * @link       http://example.com
- * @since      1.0.0
- *
- * @package    A4sForms
- * @subpackage A4sForms/includes
- */
-
 /**
  * Register all actions and filters for the plugin.
  *
@@ -19,7 +8,7 @@
  *
  * @package    A4sForms
  * @subpackage A4sForms/includes
- * @author     Your Name <email@example.com>
+ * @author     Robertas Reiciunas <accesspc@gmail.com>
  */
 class A4sForms_Loader {
 

@@ -7,7 +7,7 @@
  *
  * @package    A4sForms
  * @subpackage A4sForms/admin
- * @author     Your Name <email@example.com>
+ * @author     Robertas Reiciunas <accesspc@gmail.com>
  */
 class A4sForms_Admin {
 

@@ -1,18 +1,4 @@
 <?php
-
-/**
- * Define the internationalization functionality
- *
- * Loads and defines the internationalization files for this plugin
- * so that it is ready for translation.
- *
- * @link       http://example.com
- * @since      1.0.0
- *
- * @package    A4sForms
- * @subpackage A4sForms/includes
- */
-
 /**
  * Define the internationalization functionality.
  *
@@ -22,11 +8,19 @@
  * @since      1.0.0
  * @package    A4sForms
  * @subpackage A4sForms/includes
- * @author     Your Name <email@example.com>
+ * @author     Robertas Reiciunas <accesspc@gmail.com>
  */
 class A4sForms_i18n {
-
-
+	
+	/**
+	 * The domain specified for this plugin.
+	 *
+	 * @since    1.0.0
+	 * @access   private
+	 * @var      string    $domain    The domain identifier for this plugin.
+	 */
+	private $domain;
+	
 	/**
 	 * Load the plugin text domain for translation.
 	 *
@@ -41,7 +35,15 @@ class A4sForms_i18n {
 		);
 
 	}
-
-
+	
+	/**
+	 * Set the domain equal to that of the specified domain.
+	 *
+	 * @since    1.0.0
+	 * @param    string    $domain    The domain that represents the locale of this plugin.
+	 */
+	public function set_domain( $domain ) {
+		$this->domain = $domain;
+	}
 
 }

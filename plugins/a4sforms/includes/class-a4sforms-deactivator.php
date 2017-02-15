@@ -1,15 +1,4 @@
 <?php
-
-/**
- * Fired during plugin deactivation
- *
- * @link       http://example.com
- * @since      1.0.0
- *
- * @package    A4sForms
- * @subpackage A4sForms/includes
- */
-
 /**
  * Fired during plugin deactivation.
  *
@@ -18,7 +7,7 @@
  * @since      1.0.0
  * @package    A4sForms
  * @subpackage A4sForms/includes
- * @author     Your Name <email@example.com>
+ * @author     Robertas Reiciunas <accesspc@gmail.com>
  */
 class A4sForms_Deactivator {
 
