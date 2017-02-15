@@ -153,7 +153,7 @@ class A4sForms_Admin {
 	public function admin_menu_page_settings() {
 		echo 'admin_menu_page_settings';
 		echo '<pre>';
-		print_r($GLOBALS);
+		print_r(get_post_types());
 		echo '</pre>';
 	}
 	
