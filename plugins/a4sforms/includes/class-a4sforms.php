@@ -1,18 +1,4 @@
 <?php
-
-/**
- * The file that defines the core plugin class
- *
- * A class definition that includes attributes and functions used across both the
- * public-facing side of the site and the admin area.
- *
- * @link       http://example.com
- * @since      1.0.0
- *
- * @package    A4sForms
- * @subpackage A4sForms/includes
- */
-
 /**
  * The core plugin class.
  *
@@ -68,8 +54,8 @@ class A4sForms {
 	 */
 	public function __construct() {
 
-		$this->a4sforms = 'a4sforms';
-		$this->version = '1.0.0';
+		$this->a4sforms = (isset($plugin_data['TextDomain'])) ? $plugin_data['TextDomain'] : 'a4sforms';
+		$this->version = (isset($plugin_data['Version'])) ? $plugin_data['Version'] : '1.0.0';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -119,6 +105,13 @@ class A4sForms {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-a4sforms-public.php';
 
+		// extra loaded here
+		/*
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-a4s-addons-widget-cpt.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-a4s-addons-widget-pwgen.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-a4s-addons-ad-contacts.php';
+		 */
+		
 		$this->loader = new A4sForms_Loader();
 
 	}
@@ -135,6 +128,7 @@ class A4sForms {
 	private function set_locale() {
 
 		$plugin_i18n = new A4sForms_i18n();
+		$plugin_i18n->set_domain($this->get_a4sforms());
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
@@ -154,6 +148,9 @@ class A4sForms {
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 
+		// Extra
+		$this->loader->add_action( 'admin_menu', $plugin_admin, 'admin_menu_add' );
+		$this->loader->add_action( 'admin_init', $plugin_admin, 'admin_menu_init' );
 	}
 
 	/**
@@ -170,6 +167,25 @@ class A4sForms {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
+		// Extra
+		/*
+		$options = get_option( 'a4s-addons' );
+		
+		if ( isset($options['cpt']) && $options['cpt'] == 1 ) {
+			$plugin_widget_cpt = new A4s_Addons_Widget_CPT();
+			$this->loader->add_action( 'widgets_init', $plugin_widget_cpt, 'register_widget' );
+		}
+		
+		if ( isset($options['pwgen']) && $options['pwgen'] == 1 ) {
+			$plugin_widget_pwgen = new A4s_Addons_Widget_PwGen();
+			$this->loader->add_action( 'widgets_init', $plugin_widget_pwgen, 'register_widget' );
+		}
+		
+		if ( isset($options['adcontacts']) && $options['adcontacts'] == 1 ) {
+			$plugin_addon_adcontacts = new A4s_Addons_AD_Contacts();
+			$this->loader->add_action( 'init', $plugin_addon_adcontacts, 'register_shortcodes' );
+		}
+		 */
 	}
 
 	/**

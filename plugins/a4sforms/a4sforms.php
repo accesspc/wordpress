@@ -9,7 +9,7 @@
  * Plugin Name:       A4s Forms
  * Plugin URI:        http://www.reiciunas.lt/plugins/a4s-forms
  * Description:       Forms
- * Version:           1.0.1
+ * Version:           1.0.2
  * Author:            Robertas Reiciunas
  * Author URI:        http://www.reiciunas.lt/
  * License:           GPL-2.0+
@@ -59,8 +59,14 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-a4sforms.php';
  * @since    1.0.0
  */
 function run_a4sforms() {
+	
+	include_once ABSPATH . 'wp-admin/includes/plugin.php';
+	$plugin_data = array();
+	if (is_admin() && function_exists('get_plugin_data')) {
+		$plugin_data = get_plugin_data(__FILE__);
+	}
 
-	$plugin = new A4sForms();
+	$plugin = new A4sForms($plugin_data);
 	$plugin->run();
 
 }

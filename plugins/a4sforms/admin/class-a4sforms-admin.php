@@ -1,15 +1,4 @@
 <?php
-
-/**
- * The admin-specific functionality of the plugin.
- *
- * @link       http://example.com
- * @since      1.0.0
- *
- * @package    A4sForms
- * @subpackage A4sForms/admin
- */
-
 /**
  * The admin-specific functionality of the plugin.
  *
@@ -98,6 +87,66 @@ class A4sForms_Admin {
 
 		wp_enqueue_script( $this->a4sforms, plugin_dir_url( __FILE__ ) . 'js/a4sforms-admin.js', array( 'jquery' ), $this->version, false );
 
+	}
+	
+	public function admin_menu_add() {
+		add_menu_page(
+			__('A4s Forms', 'a4sforms'),
+			__('A4s Forms', 'a4sforms'),
+			'manage_options',
+			'a4sforms_admin_menu',
+			'A4sAdmins::admin_menu_page_general'
+		);
+		
+		add_submenu_page(
+			'a4sforms_admin_menu',
+			__( 'Settings', 'a4sforms' ),
+			__( 'Settings', 'a4sforms' ),
+			'manage_options',
+			'a4sforms_admin_menu_settings',
+			'A4sAdmins::admin_menu_page_settings'
+		);
+	}
+	
+	public function admin_menu_init() {
+		register_settings('a4sforms_settings', 'a4sforms');
+		
+		add_settings_section(
+			'a4sforms_settings_section',
+			__('Settings section', 'a4sforms'),
+			'A4sForms::settings_section_callback',
+			'a4sforms_settings'
+		);
+		
+		add_settings_field(
+			'a4sforms_settings_field',
+			__('Settings field', 'a4sforms'),
+			'A4sForms::settings_field_callback',
+			'a4sforms_settings',
+			'a4sforms_settings_section'
+		);
+	}
+	
+	public function admin_menu_page_general() {
+		?>
+		<div class='a4sforms-page-general'>
+			<form action='options.php' method='post'>
+				<?php 
+				settings_fields('a4sforms_settings');
+				do_settings_sections('a4sforms_settings');
+				submit_button();
+				?>
+			</form>
+		</div>
+		<?php
+	}
+	
+	public function admin_menu_page_settings() {
+		echo 'admin_menu_page_settings';
+	}
+	
+	public function settings_section_callback() {
+		echo 'settings_section_callback';
 	}
 
 }
