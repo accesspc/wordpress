@@ -168,6 +168,9 @@ class A4sForms {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
 		// Extra
+		$this->loader->add_action( 'init', $this, 'register_form_post_type' );
+		
+		
 		/*
 		$options = get_option( 'a4s-addons' );
 		
@@ -226,6 +229,43 @@ class A4sForms {
 	 */
 	public function get_version() {
 		return $this->version;
+	}
+	
+	public function register_form_post_type() {
+		$labels = array(
+			'name'               => _x( 'Forms', 'post type general name', 'a4sforms' ),
+			'singular_name'      => _x( 'Form', 'post type singular name', 'a4sforms' ),
+			'menu_name'          => _x( 'Forms', 'admin menu', 'a4sforms' ),
+			'name_admin_bar'     => _x( 'Form', 'add new on admin bar', 'a4sforms' ),
+			'add_new'            => _x( 'Add New', 'form', 'a4sforms' ),
+			'add_new_item'       => __( 'Add New Form', 'a4sforms' ),
+			'new_item'           => __( 'New Form', 'a4sforms' ),
+			'edit_item'          => __( 'Edit Form', 'a4sforms' ),
+			'view_item'          => __( 'View Form', 'a4sforms' ),
+			'all_items'          => __( 'All Forms', 'a4sforms' ),
+			'search_items'       => __( 'Search Forms', 'a4sforms' ),
+			'parent_item_colon'  => __( 'Parent Forms:', 'a4sforms' ),
+			'not_found'          => __( 'No forms found.', 'a4sforms' ),
+			'not_found_in_trash' => __( 'No forms found in Trash.', 'a4sforms' )
+		);
+		
+		$args = array(
+			'labels'             => $labels,
+			'description'        => __( 'Description.', 'a4sforms' ),
+			'public'             => true,
+			'publicly_queryable' => true,
+			'show_ui'            => true,
+			'show_in_menu'       => true,
+			'query_var'          => true,
+			'rewrite'            => array( 'slug' => 'form' ),
+			'capability_type'    => 'post',
+			'has_archive'        => true,
+			'hierarchical'       => false,
+			'menu_position'      => null,
+			'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+		);
+		
+		register_post_type( 'form', $args );
 	}
 
 }

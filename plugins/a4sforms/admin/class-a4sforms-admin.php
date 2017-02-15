@@ -152,6 +152,9 @@ class A4sForms_Admin {
 	
 	public function admin_menu_page_settings() {
 		echo 'admin_menu_page_settings';
+		echo '<pre>';
+		print_r($GLOBALS);
+		echo '</pre>';
 	}
 	
 	public function settings_field_callback() {
