@@ -91,21 +91,30 @@ class A4sForms_Admin {
 	
 	public function admin_menu_add() {
 		add_menu_page(
-			__('A4s Forms', 'a4sforms'),
+			__('A4s', 'a4sforms'),
 			__('A4s Forms', 'a4sforms'),
 			'manage_options',
-			'a4sforms_admin_menu',
+			'a4sforms',
 			'A4sForms_Admin::admin_menu_page_general'
 		);
 		
 		add_submenu_page(
-			'a4sforms_admin_menu',
-			__( 'Settings', 'a4sforms' ),
+			'a4sforms',
+			__( 'A4s Forms', 'a4sforms' ),
+			__( 'Forms', 'a4sforms' ),
+			'manage_options',
+			'a4sforms',
+			'A4sForms_Admin::admin_menu_page_general'
+		);
+		
+		add_submenu_page(
+			'a4sforms',
+			__( 'A4s Forms Settings', 'a4sforms' ),
 			__( 'Settings', 'a4sforms' ),
 			'manage_options',
-			'a4sforms_admin_menu_settings',
+			'a4sforms_settings',
 			'A4sForms_Admin::admin_menu_page_settings'
-		);
+			);
 	}
 	
 	public function admin_menu_init() {
