@@ -1,0 +1,96 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+ 
+/**
+* AD Contacts
+*/
+.ad-user:hover {
+	background-color: rgba(192, 192, 192, 0.2);
+}
+
+/**
+* Widget PWGen
+*/
+.pwgen .password {
+	text-align: center;
+}
+.pwgen .password:hover {
+	background: #eee;
+}
+.pwgen .pwgen_output {
+	font-family: monospace;
+}
+.pwgen .input-checkbox label {
+	border: 0px;
+	text-align: left;
+}
+.pwgen .pwgen-checkbox-label {
+	font-weight: normal;
+}
+.pwgen .pwgen_generate {
+	width: 100%;
+}
+.pwgen .pwgen-number span {
+	width: 50%;
+}
+.pwgen > form > div {
+	margin-bottom: 4px;
+}
+
+/**
+* Widget CPT
+*/
+.panel-body .a4s-cpt {
+	max-height: 800px;
+	overflow-y: auto;
+}
+.a4s-cpt .cat-title>a {
+	color: #0c3354;
+	font-weight: bold;
+}
+.a4s-cpt ul {
+	list-style: none;
+	margin-left: 0;
+}
+.a4s-cpt>ul>li {
+	border-bottom: 1px solid #0c3354;
+}
+.a4s-cpt ul ul {
+	/*margin-left: 1.0em;*/
+	
+}
+.a4s-cpt li {
+	border-left: 0.2em solid #ffffff;
+	padding-left: 0.3em;
+}
+.a4s-cpt li:nth-child(even):hover {
+	border-left: 0.2em solid rgba(12,51,84,1);
+}
+.a4s-cpt li:nth-child(odd):hover {
+	border-left: 0.2em solid rgba(55,137,138,1);
+}
+.a4s-cpt li.cat-title:before {
+	/*content: "\3E";
+	font-size: 0.8em;
+	font-weight: bold;
+	margin-right: 0.5em;*/
+}
+.a4s-cpt li.cat-item {
+	
+}
+.a4s-cpt li.cat-item:before {
+	/*content: "\226B";
+	font-size: 0.8em;
+	font-weight: bold;
+	margin-right: 0.5em;*/
+}
+.a4s-cpt-order {
+	font-size: 1.3em;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.a4s-cpt-qs {
+	margin-bottom: 10px;
+}

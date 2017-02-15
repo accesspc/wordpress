@@ -1,0 +1,110 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: A4s Addons\n"
+"POT-Creation-Date: 2016-07-26 16:28+0200\n"
+"PO-Revision-Date: 2016-07-26 16:29+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.3\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: admin/class-a4s-addons-admin.php:94
+msgid "Page title"
+msgstr ""
+
+#: admin/class-a4s-addons-admin.php:95
+msgid "A4s settings"
+msgstr ""
+
+#: admin/class-a4s-addons-admin.php:108
+msgid "Widgets options"
+msgstr ""
+
+#: admin/class-a4s-addons-admin.php:116
+msgid "Enabled widget list"
+msgstr ""
+
+#: admin/class-a4s-addons-admin.php:128
+msgid "A4s settings page"
+msgstr ""
+
+#: admin/class-a4s-addons-admin.php:167
+msgid "This section is for widgets"
+msgstr ""
+
+#: includes/class-a4s-addons-widget-cpt.php:13
+msgid "A4s Category and Post Tree Description"
+msgstr ""
+
+#: includes/class-a4s-addons-widget-cpt.php:50
+#: includes/class-a4s-addons-widget-pwgen.php:116
+msgid "New title"
+msgstr ""
+
+#: includes/class-a4s-addons-widget-cpt.php:55
+#: includes/class-a4s-addons-widget-pwgen.php:128
+msgid "Title:"
+msgstr ""
+
+#: includes/class-a4s-addons-widget-cpt.php:70
+msgid "Also list posts"
+msgstr ""
+
+#: includes/class-a4s-addons-widget-pwgen.php:16
+msgid "A4s_Addons Widget PwGen Description"
+msgstr ""
+
+#: includes/class-a4s-addons-widget-pwgen.php:62
+msgid "Uppercase"
+msgstr ""
+
+#: includes/class-a4s-addons-widget-pwgen.php:69
+msgid "Lowercase"
+msgstr ""
+
+#: includes/class-a4s-addons-widget-pwgen.php:76
+msgid "Numbers"
+msgstr ""
+
+#: includes/class-a4s-addons-widget-pwgen.php:83
+msgid "Special"
+msgstr ""
+
+#: includes/class-a4s-addons-widget-pwgen.php:88
+msgid "Generate"
+msgstr ""
+
+#: includes/class-a4s-addons-widget-pwgen.php:139
+msgid "Password length"
+msgstr ""
+
+#: includes/class-a4s-addons-widget-pwgen.php:149
+msgid "Password count"
+msgstr ""
+
+#: includes/class-a4s-addons-widget-pwgen.php:164
+msgid "Include uppercase"
+msgstr ""
+
+#: includes/class-a4s-addons-widget-pwgen.php:173
+msgid "Include lowercase"
+msgstr ""
+
+#: includes/class-a4s-addons-widget-pwgen.php:182
+msgid "Include numbers"
+msgstr ""
+
+#: includes/class-a4s-addons-widget-pwgen.php:191
+msgid "Include special"
+msgstr ""
