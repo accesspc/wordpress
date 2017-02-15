@@ -9,7 +9,7 @@
  * Plugin Name:       A4s Forms
  * Plugin URI:        http://www.reiciunas.lt/plugins/a4s-forms
  * Description:       Forms
- * Version:           1.0.5
+ * Version:           1.0.6
  * Author:            Robertas Reiciunas
  * Author URI:        http://www.reiciunas.lt/
  * License:           GPL-2.0+

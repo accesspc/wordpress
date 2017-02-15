@@ -114,14 +114,14 @@ class A4sForms_Admin {
 		add_settings_section(
 			'a4sforms_settings_section',
 			__('Settings section', 'a4sforms'),
-			'A4sForms::settings_section_callback',
+			'A4sForms_Admin::settings_section_callback',
 			'a4sforms_settings'
 		);
 		
 		add_settings_field(
 			'a4sforms_settings_field',
 			__('Settings field', 'a4sforms'),
-			'A4sForms::settings_field_callback',
+			'A4sForms_Admin::settings_field_callback',
 			'a4sforms_settings',
 			'a4sforms_settings_section'
 		);
@@ -143,6 +143,10 @@ class A4sForms_Admin {
 	
 	public function admin_menu_page_settings() {
 		echo 'admin_menu_page_settings';
+	}
+	
+	public function settings_field_callback() {
+		echo 'settings_field_callback';
 	}
 	
 	public function settings_section_callback() {
