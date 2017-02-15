@@ -265,7 +265,7 @@ class A4sForms {
 			'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
 		);
 		
-		register_post_type( 'form', $args );
+		register_post_type( 'a4sform', $args );
 	}
 
 }

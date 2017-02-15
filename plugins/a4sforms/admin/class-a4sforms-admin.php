@@ -153,7 +153,9 @@ class A4sForms_Admin {
 	public function admin_menu_page_settings() {
 		echo 'admin_menu_page_settings';
 		echo '<pre>';
-		print_r(get_post_types());
+		$args = array('name' => 'property');
+		$output = 'objects';
+		print_r(get_post_types($args, $output));
 		echo '</pre>';
 	}
 	
