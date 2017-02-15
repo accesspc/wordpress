@@ -95,7 +95,7 @@ class A4sForms_Admin {
 			__('A4s Forms', 'a4sforms'),
 			'manage_options',
 			'a4sforms_admin_menu',
-			'A4sAdmins::admin_menu_page_general'
+			'A4sForms_Admin::admin_menu_page_general'
 		);
 		
 		add_submenu_page(
@@ -104,7 +104,7 @@ class A4sForms_Admin {
 			__( 'Settings', 'a4sforms' ),
 			'manage_options',
 			'a4sforms_admin_menu_settings',
-			'A4sAdmins::admin_menu_page_settings'
+			'A4sForms_Admin::admin_menu_page_settings'
 		);
 	}
 	
