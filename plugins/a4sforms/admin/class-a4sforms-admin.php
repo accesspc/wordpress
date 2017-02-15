@@ -109,7 +109,7 @@ class A4sForms_Admin {
 	}
 	
 	public function admin_menu_init() {
-		register_settings('a4sforms_settings', 'a4sforms');
+		register_setting('a4sforms_settings', 'a4sforms');
 		
 		add_settings_section(
 			'a4sforms_settings_section',
