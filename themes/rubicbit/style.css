@@ -37,6 +37,9 @@ header#site-header {
 .highlight {
 	color: #0086e6;
 }
+.rubicbit-bg {
+    background-color: #002d4d;
+}
 .rubicbit-block .elementor-icon {
 	transition-duration: .3s;
 }
