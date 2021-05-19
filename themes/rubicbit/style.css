@@ -37,10 +37,12 @@ header#site-header {
 .highlight {
 	color: #0086e6;
 }
+/*
 .home #top-bar-wrap,
 .home #site-header{
     background-color: rgba(29,32,36,0.7);
 }
+*/
 .rubicbit-bg {
     background-color: #002d4d;
 }
