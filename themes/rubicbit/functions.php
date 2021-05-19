@@ -28,3 +28,18 @@ function rubicbit_enqueue_parent_style() {
 	
 }
 add_action( 'wp_enqueue_scripts', 'rubicbit_enqueue_parent_style' );
+
+function rubicbit_google_analytics() {
+	?>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S87H6KJZ2H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-S87H6KJZ2H');
+</script>
+<?php
+}
+add_action( 'wp_head', 'rubicbit_google_analytics', 20 );

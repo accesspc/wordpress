@@ -9,3 +9,56 @@ Version: 1.0
 */
 
 /* Parent stylesheet should be loaded from functions.php not using @import */
+
+header#site-header {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 1020;
+}
+.contact-us form input, .contact-us form textarea {
+	border: 1px solid #eceff140;
+	-webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  border-radius: 0px;
+	color: #939ca5;
+}
+.contact-us form button {
+	background-color: transparent;
+	width: 100%;
+}
+.contact-us form button:hover {
+	background-color: #0086e6;
+}
+.contact-us .wpforms-confirmation-container p {
+	color: green;
+}
+.highlight {
+	color: #0086e6;
+}
+.rubicbit-block .elementor-icon {
+	transition-duration: .3s;
+}
+.rubicbit-block:hover .elementor-icon {
+	-webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+.rubicbit-border {
+	    border-top: 2px solid rgba(236,239,241,.2);
+    height: 1px;
+    margin: 10px auto 0;
+    position: relative;
+    width: 30%;
+}
+.rubicbit-border:before {
+    background-color: #fff;
+    content: '';
+    height: 6px;
+    left: 50%;
+    margin-left: -20px;
+    position: absolute;
+    top: -4px;
+    width: 50px;
+    background-color: #0086e6;
+}
