@@ -16,6 +16,9 @@ header#site-header {
 	top: 0;
 	z-index: 1020;
 }
+#main {
+    background-color: #ffffff;
+}
 .contact-us form input, .contact-us form textarea {
 	border: 1px solid #eceff140;
 	-webkit-border-radius: 0px;
