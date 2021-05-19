@@ -29,17 +29,34 @@ function rubicbit_enqueue_parent_style() {
 }
 add_action( 'wp_enqueue_scripts', 'rubicbit_enqueue_parent_style' );
 
-function rubicbit_google_analytics() {
+function rubicbit_google_analytics_ga4() {
 	?>
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-S87H6KJZ2H"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDH1197ZMC"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-S87H6KJZ2H');
+  gtag('config', 'G-BDH1197ZMC');
 </script>
 <?php
 }
-add_action( 'wp_head', 'rubicbit_google_analytics', 20 );
+add_action( 'wp_head', 'rubicbit_google_analytics_ga4', 20 );
+
+function rubicbit_google_analytics_ua() {
+	?>
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-28153074-7', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+<?php
+}
+add_action( 'wp_head', 'rubicbit_google_analytics_ua', 20 );
