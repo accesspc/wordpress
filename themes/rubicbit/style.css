@@ -19,11 +19,6 @@ h6.elementor-heading-title {
     color: #ffffff;
 }
 
-.service-card:hover .elementor-widget-wrap {
-    background: linear-gradient(180deg, #5ec1ea, #256ad6, #1150b3);
-    color: #ffffff;
-}
-
 header#site-header {
     position: -webkit-sticky;
     position: sticky;
