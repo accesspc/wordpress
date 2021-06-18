@@ -19,6 +19,10 @@ h6.elementor-heading-title {
     color: #ffffff;
 }
 
+input.sib-default-btn {
+    background-color: #0174c7;
+}
+
 header#site-header {
     position: -webkit-sticky;
     position: sticky;
