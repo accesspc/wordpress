@@ -19,7 +19,7 @@ h6.elementor-heading-title {
     color: #ffffff;
 }
 
-.service-card:hover {
+.service-card:hover .elementor-widget-wrap {
     background: linear-gradient(180deg, #5ec1ea, #256ad6, #1150b3);
     color: #ffffff;
 }
