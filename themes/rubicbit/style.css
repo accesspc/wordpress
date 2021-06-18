@@ -19,8 +19,9 @@ h6.elementor-heading-title {
     color: #ffffff;
 }
 
-form .sib-email-area .input.sib-default-btn {
-    background-color: #0174c7;
+.service-card:hover {
+    background: linear-gradient(180deg, #5ec1ea, #256ad6, #1150b3);
+    color: #ffffff;
 }
 
 header#site-header {
