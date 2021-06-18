@@ -10,12 +10,12 @@ Version: 1.0
 
 /* Parent stylesheet should be loaded from functions.php not using @import */
 
-.elementor-page h1.elementor-heading-title,
-.elementor-page h2.elementor-heading-title,
-.elementor-page h3.elementor-heading-title,
-.elementor-page h4.elementor-heading-title,
-.elementor-page h5.elementor-heading-title,
-.elementor-page h6.elementor-heading-title {
+h1.elementor-heading-title,
+h2.elementor-heading-title,
+h3.elementor-heading-title,
+h4.elementor-heading-title,
+h5.elementor-heading-title,
+h6.elementor-heading-title {
     color: #ffffff;
 }
 
